@@ -99,15 +99,15 @@
   .hero::after {
     content: "";
     position: absolute;
-    top: 0; right: 0;
-    width: 46%;
-    height: 100%;
-    background-image: repeating-linear-gradient(
-      -35deg,
-      var(--navy) 0px, var(--navy) 34px,
-      transparent 34px, transparent 68px
-    );
-    opacity: 0.05;
+    top: 50%; right: -60px;
+    width: 520px;
+    height: 520px;
+    transform: translateY(-50%);
+    background-image: url("logo.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.06;
     pointer-events: none;
   }
   .hero-eyebrow {
