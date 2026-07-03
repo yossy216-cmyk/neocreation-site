@@ -254,16 +254,29 @@
     color: var(--gray);
     max-width: 30em;
   }
-  a.mail-link {
-    font-size: 1.15rem;
+  a.form-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.98rem;
     font-weight: 700;
-    color: var(--navy);
+    color: var(--white);
+    background: var(--navy);
     text-decoration: none;
-    border-bottom: 2px solid var(--gold);
-    padding-bottom: 4px;
+    padding: 15px 30px;
+    border-radius: 2px;
     white-space: nowrap;
+    transition: background .2s ease;
   }
-  a.mail-link:hover { color: var(--gold); }
+  a.form-link:hover { background: var(--gold); }
+  a.form-link svg {
+    width: 16px; height: 16px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
 
   /* ---- footer ---- */
   footer {
@@ -328,7 +341,7 @@
     <div class="meta">
       <div><strong>設立</strong>2017年5月</div>
       <div><strong>所在地</strong>東京都杉並区</div>
-      <div><strong>代表</strong>山下 義智</div>
+      <div><strong>代表取締役</strong>山下 義智</div>
     </div>
   </div>
 </header>
@@ -349,7 +362,7 @@
           <dt>設立</dt>
           <dd>2017年5月</dd>
           <dt>代表</dt>
-          <dd>代表 山下 義智</dd>
+          <dd>代表取締役 山下 義智</dd>
           <dt>所在地</dt>
           <dd>東京都杉並区清水３－２７－１５</dd>
           <dt>資本金</dt>
@@ -403,8 +416,11 @@
         <span class="en">Contact</span>
       </div>
       <div class="contact-inner">
-        <p>ご質問・ご相談は、下記メールアドレスまでお気軽にお問い合わせください。</p>
-        <a class="mail-link" href="mailto:info@neocreation.jp">info@neocreation.jp</a>
+        <p>ご質問・ご相談は、下記フォームよりお気軽にお問い合わせください。</p>
+        <a class="form-link" href="https://docs.google.com/forms/d/e/1FAIpQLSc7eXlz2MLLJQs3peymXLT-2I6-ccqDxSiTInXgWjl2MlHBSg/viewform" target="_blank" rel="noopener">
+          お問い合わせフォーム
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
       </div>
     </div>
   </section>
