@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社ネオクリエイション</title>
+<meta name="description" content="株式会社ネオクリエイション コーポレートサイト。建設業・飲食業・IT業を展開。">
+<style>
+  :root {
+    --navy: #16233f;
+    --navy-light: #22345a;
+    --gray-dark: #333333;
+    --gray: #6b7280;
+    --gray-light: #f4f5f7;
+    --border: #e0e3e8;
+    --white: #ffffff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", Arial, sans-serif;
+    color: var(--gray-dark);
+    background: var(--white);
+    line-height: 1.7;
+  }
+  header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 28px 20px;
+    text-align: center;
+  }
+  header h1 {
+    font-size: 1.6rem;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+  }
+  header p {
+    margin-top: 6px;
+    font-size: 0.85rem;
+    color: #c7cede;
+    letter-spacing: 0.05em;
+  }
+  main {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  section:last-of-type {
+    border-bottom: none;
+  }
+  h2 {
+    font-size: 1.3rem;
+    color: var(--navy);
+    margin-bottom: 28px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--navy);
+    display: inline-block;
+  }
+  .company-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .company-table th,
+  .company-table td {
+    text-align: left;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  .company-table th {
+    width: 30%;
+    background: var(--gray-light);
+    color: var(--navy);
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  .company-table td {
+    font-size: 0.95rem;
+  }
+  .business-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .business-card {
+    background: var(--gray-light);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 24px 20px;
+  }
+  .business-card h3 {
+    color: var(--navy);
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+    border-left: 4px solid var(--navy);
+    padding-left: 10px;
+  }
+  .business-card p {
+    font-size: 0.9rem;
+    color: var(--gray);
+  }
+  .business-card ul {
+    margin-top: 10px;
+    padding-left: 1.1em;
+    font-size: 0.85rem;
+    color: var(--gray);
+  }
+  .business-card li {
+    margin-bottom: 4px;
+  }
+  .contact-box {
+    background: var(--gray-light);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 32px;
+    text-align: center;
+  }
+  .contact-box a {
+    color: var(--navy);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  .contact-box a:hover {
+    text-decoration: underline;
+  }
+  footer {
+    background: var(--navy);
+    color: #c7cede;
+    text-align: center;
+    padding: 24px 20px;
+    font-size: 0.8rem;
+  }
+  @media (max-width: 640px) {
+    .business-grid {
+      grid-template-columns: 1fr;
+    }
+    .company-table th {
+      width: 40%;
+      font-size: 0.85rem;
+    }
+    .company-table td {
+      font-size: 0.85rem;
+    }
+    header h1 {
+      font-size: 1.3rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>株式会社ネオクリエイション</h1>
+  <p>NEO CREATION CO., LTD.</p>
+</header>
+
+<main>
+
+  <section id="company">
+    <h2>会社概要</h2>
+    <table class="company-table">
+      <tr>
+        <th>商号</th>
+        <td>株式会社ネオクリエイション</td>
+      </tr>
+      <tr>
+        <th>設立</th>
+        <td>2017年5月</td>
+      </tr>
+      <tr>
+        <th>代表</th>
+        <td>代表 山下 義智</td>
+      </tr>
+      <tr>
+        <th>所在地</th>
+        <td>東京都杉並区清水３－２７－１５</td>
+      </tr>
+      <tr>
+        <th>資本金</th>
+        <td>1000万円</td>
+      </tr>
+      <tr>
+        <th>事業内容</th>
+        <td>建設業・飲食業・IT業</td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="business">
+    <h2>事業内容</h2>
+    <div class="business-grid">
+      <div class="business-card">
+        <h3>建設業</h3>
+        <p>各種建設工事の企画・施工を手がけています。</p>
+      </div>
+      <div class="business-card">
+        <h3>飲食業</h3>
+        <p>飲食店の運営を通じて地域のお客様に価値を提供しています。</p>
+      </div>
+      <div class="business-card">
+        <h3>IT業</h3>
+        <p>IT関連事業を展開しています。</p>
+        <ul>
+          <li>越境ECサポートサービス「せどえもん」</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>お問い合わせ</h2>
+    <div class="contact-box">
+      <p style="margin-bottom: 10px; color: var(--gray);">お問い合わせは下記メールアドレスまでお願いいたします。</p>
+      <a href="mailto:info@neocreation.jp">info@neocreation.jp</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Copyright &copy; 株式会社ネオクリエイション
+</footer>
+
+</body>
+</html>
