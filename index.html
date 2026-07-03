@@ -3,235 +3,475 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>株式会社ネオクリエイション</title>
-<meta name="description" content="株式会社ネオクリエイション コーポレートサイト。建設業・飲食業・IT業を展開。">
+<title>株式会社ネオクリエイション｜NEO CREATION</title>
+<meta name="description" content="株式会社ネオクリエイション コーポレートサイト。建設業・飲食業・IT業を通じて事業を展開しています。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --navy: #16233f;
-    --navy-light: #22345a;
-    --gray-dark: #333333;
+    --navy: #101c34;
+    --navy-2: #1c2e50;
+    --navy-3: #2a4270;
+    --gold: #a98549;
+    --ink: #24272e;
     --gray: #6b7280;
-    --gray-light: #f4f5f7;
-    --border: #e0e3e8;
+    --gray-soft: #97a0ad;
+    --bg-soft: #f6f7f9;
+    --border: #e6e8ec;
     --white: #ffffff;
+    --shadow-sm: 0 1px 3px rgba(16,28,52,0.06), 0 1px 2px rgba(16,28,52,0.08);
+    --shadow-md: 0 10px 30px -12px rgba(16,28,52,0.25);
+    --radius: 10px;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
   body {
-    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", Arial, sans-serif;
-    color: var(--gray-dark);
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+    color: var(--ink);
     background: var(--white);
-    line-height: 1.7;
+    line-height: 1.8;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
   }
-  header {
-    background: var(--navy);
-    color: var(--white);
-    padding: 28px 20px;
-    text-align: center;
-  }
-  header img.logo {
-    height: 96px;
-    width: auto;
-    margin-bottom: 16px;
-    background: var(--white);
-    padding: 10px 16px;
-    border-radius: 6px;
-  }
-  header h1 {
-    font-size: 1.6rem;
-    letter-spacing: 0.05em;
-    font-weight: 600;
-  }
-  header p {
-    margin-top: 6px;
-    font-size: 0.85rem;
-    color: #c7cede;
-    letter-spacing: 0.05em;
-  }
-  main {
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  section {
-    padding: 56px 0;
+  a { color: inherit; }
+
+  /* ---- nav ---- */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: saturate(180%) blur(8px);
     border-bottom: 1px solid var(--border);
   }
-  section:last-of-type {
-    border-bottom: none;
+  .nav-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
-  h2 {
-    font-size: 1.3rem;
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.03em;
     color: var(--navy);
-    margin-bottom: 28px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid var(--navy);
+  }
+  .nav-brand img {
+    height: 28px;
+    width: auto;
+    display: block;
+  }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    font-size: 0.86rem;
+    font-weight: 500;
+    color: var(--gray);
+  }
+  .nav-links a {
+    text-decoration: none;
+    transition: color .2s ease;
+    padding: 4px 2px;
+    border-bottom: 2px solid transparent;
+  }
+  .nav-links a:hover {
+    color: var(--navy);
+    border-bottom-color: var(--gold);
+  }
+
+  /* ---- hero ---- */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(155deg, var(--navy) 0%, var(--navy-2) 55%, var(--navy-3) 100%);
+    color: var(--white);
+    padding: 96px 24px 88px;
+    text-align: center;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+      -35deg,
+      rgba(255,255,255,0.045) 0px,
+      rgba(255,255,255,0.045) 46px,
+      transparent 46px,
+      transparent 92px
+    );
+    pointer-events: none;
+  }
+  .hero-inner {
+    position: relative;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .hero .logo-badge {
+    width: 128px;
+    height: 128px;
+    margin: 0 auto 32px;
+    background: var(--white);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-md);
+  }
+  .hero .logo-badge img {
+    width: 82px;
+    height: auto;
+  }
+  .hero .eyebrow {
     display: inline-block;
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    color: #d8bd8a;
+    font-weight: 600;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+  }
+  .hero h1 {
+    font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+  .hero p.en {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    letter-spacing: 0.14em;
+    color: #a9b4cc;
+  }
+  .hero .hero-divider {
+    width: 46px;
+    height: 3px;
+    background: var(--gold);
+    margin: 30px auto;
+    border-radius: 3px;
+  }
+  .hero .hero-tagline {
+    font-size: 0.98rem;
+    color: #c4cce0;
+    line-height: 1.9;
+  }
+
+  /* ---- layout ---- */
+  main {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  section {
+    padding: 84px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  section:last-of-type { border-bottom: none; }
+
+  .section-head {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  .section-head .tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  .section-head h2 {
+    font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: 0.03em;
+  }
+
+  /* ---- company table ---- */
+  .company-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
   }
   .company-table {
     width: 100%;
     border-collapse: collapse;
   }
+  .company-table tr:not(:last-child) th,
+  .company-table tr:not(:last-child) td {
+    border-bottom: 1px solid var(--border);
+  }
   .company-table th,
   .company-table td {
     text-align: left;
-    padding: 16px 20px;
-    border-bottom: 1px solid var(--border);
+    padding: 20px 28px;
     vertical-align: top;
   }
   .company-table th {
-    width: 30%;
-    background: var(--gray-light);
+    width: 34%;
+    background: var(--bg-soft);
     color: var(--navy);
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.03em;
+    border-right: 1px solid var(--border);
   }
   .company-table td {
-    font-size: 0.95rem;
+    font-size: 0.96rem;
+    color: var(--ink);
   }
+
+  /* ---- business ---- */
   .business-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 24px;
   }
   .business-card {
-    background: var(--gray-light);
+    position: relative;
+    background: var(--white);
     border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 24px 20px;
+    border-radius: var(--radius);
+    padding: 32px 26px;
+    box-shadow: var(--shadow-sm);
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  .business-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+  }
+  .business-card .icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .business-card .icon svg {
+    width: 24px;
+    height: 24px;
+    stroke: var(--white);
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
   }
   .business-card h3 {
     color: var(--navy);
-    font-size: 1.05rem;
+    font-size: 1.08rem;
+    font-weight: 700;
     margin-bottom: 10px;
-    border-left: 4px solid var(--navy);
-    padding-left: 10px;
+    letter-spacing: 0.02em;
   }
   .business-card p {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     color: var(--gray);
+    line-height: 1.75;
   }
-  .business-card ul {
-    margin-top: 10px;
-    padding-left: 1.1em;
-    font-size: 0.85rem;
-    color: var(--gray);
-  }
-  .business-card li {
-    margin-bottom: 4px;
-  }
-  .contact-box {
-    background: var(--gray-light);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 32px;
-    text-align: center;
-  }
-  .contact-box a {
+  .business-card .sub-tag {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 0.78rem;
     color: var(--navy);
-    font-weight: 600;
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-weight: 500;
+  }
+
+  /* ---- contact ---- */
+  .contact-card {
+    background: linear-gradient(155deg, var(--navy) 0%, var(--navy-2) 100%);
+    border-radius: var(--radius);
+    padding: 52px 32px;
+    text-align: center;
+    color: var(--white);
+    box-shadow: var(--shadow-md);
+  }
+  .contact-card p.lead {
+    font-size: 0.92rem;
+    color: #b9c2d8;
+    margin-bottom: 22px;
+  }
+  .contact-card a.mail {
+    display: inline-block;
+    color: var(--navy);
+    background: var(--white);
+    font-weight: 700;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    padding: 14px 34px;
+    border-radius: 999px;
+    letter-spacing: 0.02em;
+    transition: transform .2s ease, box-shadow .2s ease;
   }
-  .contact-box a:hover {
-    text-decoration: underline;
+  .contact-card a.mail:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.25);
   }
+
+  /* ---- footer ---- */
   footer {
     background: var(--navy);
-    color: #c7cede;
+    color: #92a0bd;
     text-align: center;
-    padding: 24px 20px;
-    font-size: 0.8rem;
+    padding: 36px 24px;
+    font-size: 0.78rem;
+    letter-spacing: 0.03em;
   }
-  @media (max-width: 640px) {
-    .business-grid {
-      grid-template-columns: 1fr;
-    }
+  footer .footer-name {
+    color: #d8dfec;
+    font-weight: 600;
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 700px) {
+    .nav-links { gap: 16px; font-size: 0.78rem; }
+    .hero { padding: 72px 20px 64px; }
+    .hero .logo-badge { width: 104px; height: 104px; border-radius: 20px; }
+    .hero .logo-badge img { width: 64px; }
+    section { padding: 60px 0; }
+    .business-grid { grid-template-columns: 1fr; }
     .company-table th {
       width: 40%;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
+      padding: 16px 18px;
     }
     .company-table td {
-      font-size: 0.85rem;
+      font-size: 0.86rem;
+      padding: 16px 18px;
     }
-    header h1 {
-      font-size: 1.3rem;
-    }
+    .contact-card { padding: 40px 22px; }
   }
 </style>
 </head>
 <body>
 
-<header>
-  <img class="logo" src="logo.gif" alt="株式会社ネオクリエイション ロゴ">
-  <h1>株式会社ネオクリエイション</h1>
-  <p>NEO CREATION CO., LTD.</p>
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <img src="logo.gif" alt="">
+      株式会社ネオクリエイション
+    </div>
+    <div class="nav-links">
+      <a href="#company">会社概要</a>
+      <a href="#business">事業内容</a>
+      <a href="#contact">お問い合わせ</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow">Since 2017</span>
+    <div class="logo-badge">
+      <img src="logo.gif" alt="株式会社ネオクリエイション ロゴ">
+    </div>
+    <h1>株式会社ネオクリエイション</h1>
+    <p class="en">NEO CREATION CO., LTD.</p>
+    <div class="hero-divider"></div>
+    <p class="hero-tagline">建設・飲食・ITの3つの事業を通じて、<br class="br-mobile">確かな価値を積み重ねています。</p>
+  </div>
 </header>
 
 <main>
 
   <section id="company">
-    <h2>会社概要</h2>
-    <table class="company-table">
-      <tr>
-        <th>商号</th>
-        <td>株式会社ネオクリエイション</td>
-      </tr>
-      <tr>
-        <th>設立</th>
-        <td>2017年5月</td>
-      </tr>
-      <tr>
-        <th>代表</th>
-        <td>代表 山下 義智</td>
-      </tr>
-      <tr>
-        <th>所在地</th>
-        <td>東京都杉並区清水３－２７－１５</td>
-      </tr>
-      <tr>
-        <th>資本金</th>
-        <td>1000万円</td>
-      </tr>
-      <tr>
-        <th>事業内容</th>
-        <td>建設業・飲食業・IT業</td>
-      </tr>
-    </table>
+    <div class="section-head">
+      <span class="tag">Company</span>
+      <h2>会社概要</h2>
+    </div>
+    <div class="company-card">
+      <table class="company-table">
+        <tr>
+          <th>商号</th>
+          <td>株式会社ネオクリエイション</td>
+        </tr>
+        <tr>
+          <th>設立</th>
+          <td>2017年5月</td>
+        </tr>
+        <tr>
+          <th>代表</th>
+          <td>代表 山下 義智</td>
+        </tr>
+        <tr>
+          <th>所在地</th>
+          <td>東京都杉並区清水３－２７－１５</td>
+        </tr>
+        <tr>
+          <th>資本金</th>
+          <td>1000万円</td>
+        </tr>
+        <tr>
+          <th>事業内容</th>
+          <td>建設業・飲食業・IT業</td>
+        </tr>
+      </table>
+    </div>
   </section>
 
   <section id="business">
-    <h2>事業内容</h2>
+    <div class="section-head">
+      <span class="tag">Business</span>
+      <h2>事業内容</h2>
+    </div>
     <div class="business-grid">
       <div class="business-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-6h6v6M9 12h.01M15 12h.01M9 9h.01M15 9h.01"/></svg>
+        </div>
         <h3>建設業</h3>
-        <p>各種建設工事の企画・施工を手がけています。</p>
+        <p>各種建設工事の企画・施工を手がけ、確かな品質で地域のまちづくりに貢献しています。</p>
       </div>
       <div class="business-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24"><path d="M3 2v7a4 4 0 004 4v9M3 2v9M7 2v9M11 2l-1 9a4 4 0 004 4v9M21 2c-2.5 2-4 5-4 8 0 2 1 3 2 4v9"/></svg>
+        </div>
         <h3>飲食業</h3>
-        <p>飲食店の運営を通じて地域のお客様に価値を提供しています。</p>
+        <p>飲食店の運営を通じて、地域のお客様に日々の食の楽しみと価値を提供しています。</p>
       </div>
       <div class="business-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="1.5"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
         <h3>IT業</h3>
-        <p>IT関連事業を展開しています。</p>
-        <ul>
-          <li>越境ECサポートサービス「せどえもん」</li>
-        </ul>
+        <p>IT関連事業を展開し、テクノロジーの力で新しい価値づくりに取り組んでいます。</p>
+        <span class="sub-tag">越境ECサポートサービス「せどえもん」</span>
       </div>
     </div>
   </section>
 
   <section id="contact">
-    <h2>お問い合わせ</h2>
-    <div class="contact-box">
-      <p style="margin-bottom: 10px; color: var(--gray);">お問い合わせは下記メールアドレスまでお願いいたします。</p>
-      <a href="mailto:info@neocreation.jp">info@neocreation.jp</a>
+    <div class="section-head">
+      <span class="tag">Contact</span>
+      <h2>お問い合わせ</h2>
+    </div>
+    <div class="contact-card">
+      <p class="lead">ご質問・ご相談は、下記メールアドレスまでお気軽にお問い合わせください。</p>
+      <a class="mail" href="mailto:info@neocreation.jp">info@neocreation.jp</a>
     </div>
   </section>
 
 </main>
 
 <footer>
-  Copyright &copy; 株式会社ネオクリエイション
+  <div class="footer-name">株式会社ネオクリエイション</div>
+  <div>Copyright &copy; NEO CREATION CO., LTD. All Rights Reserved.</div>
 </footer>
 
 </body>
